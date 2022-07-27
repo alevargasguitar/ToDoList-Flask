@@ -1,15 +1,28 @@
+# Flask
+from ensurepip import bootstrap
 from flask import Flask, request, make_response, redirect, render_template
 
+# Bootstrap
+from flask_bootstrap import Bootstrap
+
+
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 todos = ['Buy coffe', 'Go to work', 'Make dinner']
 
 @app.errorhandler(404)
 def not_found(error):
+    """
+    Not Found
+    """
     return render_template('404.html', error=error)
 
 @app.errorhandler(500)
-def not_found(error):
+def server_error(error):
+    """
+    Server Error
+    """
     return render_template('500.html', error=error)
 
 @app.route('/')
