@@ -5,6 +5,8 @@ app = Flask(__name__)
 todos = ['Buy coffe', 'Go to work', 'Make dinner']
 
 
+
+
 @app.route('/')
 def index():
     user_ip = request.remote_addr
