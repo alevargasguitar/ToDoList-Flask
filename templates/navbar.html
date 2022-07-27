@@ -1,7 +1,33 @@
-<nav>
+<!-- <nav>
     <ul>
         <img src="{{ url_for('static', filename='images/platzi.webp') }}" alt="Platzi Logo">
         <li><a href="{{ url_for('index') }}">Go Home</a></li>
         <li><a href="https://www.google.com" target="_blank">Go Google.com</a></li>
     </ul>
-</nav>
+</nav> -->
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/platzi.webp') }}"
+                    style="max-width: 30px;"
+                    alt="Platzi logo">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('index') }}">Go Home</a></li>
+                <li><a href="https://www.google.com" target="_blank">Go Google</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
